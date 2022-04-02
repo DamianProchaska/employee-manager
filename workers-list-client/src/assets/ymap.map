@@ -1,0 +1,92 @@
+<img src="[mapa podstawa] (zaimportowany)" width="1000" height="559" border="0" usemap="#map" />
+
+<map name="map">
+<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+<!-- #$-:Please do not edit lines starting with "#$" -->
+<!-- #$VERSION:2.3 -->
+<!-- #$AUTHOR:Kubatypl -->
+<area shape="rect" coords="64,36,85,109" alt="k1" target="k1" href="#" />
+<area shape="rect" coords="340,23,351,35" alt="k2" target="k2" href="#" />
+<area shape="rect" coords="362,23,374,36" alt="k3" target="k3" href="#" />
+<area shape="rect" coords="116,32,127,45" alt="k4" target="k4" href="#" />
+<area shape="rect" coords="151,32,164,46" alt="k5" target="k5" href="#" />
+<area shape="rect" coords="182,34,193,45" alt="k6" target="k6" href="#" />
+<area shape="rect" coords="218,33,230,45" alt="k7" target="k7" href="#" />
+<area shape="rect" coords="249,34,260,45" alt="k8" target="k8" href="#" />
+<area shape="rect" coords="285,32,297,44" alt="k9" target="k9" href="#" />
+<area shape="rect" coords="116,59,126,71" href="#" />
+<area shape="rect" coords="150,59,163,71" href="#" />
+<area shape="rect" coords="182,60,194,71" href="#" />
+<area shape="rect" coords="218,60,230,71" href="#" />
+<area shape="rect" coords="249,59,261,70" href="#" />
+<area shape="rect" coords="285,60,297,71" href="#" />
+<area shape="rect" coords="496,40,506,50" href="#" />
+<area shape="rect" coords="533,40,543,51" href="#" />
+<area shape="rect" coords="496,65,507,76" href="#" />
+<area shape="rect" coords="532,65,544,77" href="#" />
+<area shape="rect" coords="555,66,567,77" href="#" />
+<area shape="rect" coords="593,65,604,76" href="#" />
+<area shape="rect" coords="496,125,507,135" href="#" />
+<area shape="rect" coords="534,126,543,135" href="#" />
+<area shape="rect" coords="556,113,566,123" href="#" />
+<area shape="rect" coords="592,113,604,123" href="#" />
+<area shape="rect" coords="160,143,169,152" href="#" />
+<area shape="rect" coords="195,143,206,153" href="#" />
+<area shape="rect" coords="229,144,238,153" href="#" />
+<area shape="rect" coords="263,142,274,153" href="#" />
+<area shape="rect" coords="294,142,303,153" href="#" />
+<area shape="rect" coords="329,143,341,154" href="#" />
+<area shape="rect" coords="364,142,376,152" href="#" />
+<area shape="rect" coords="160,169,171,179" href="#" />
+<area shape="rect" coords="195,169,208,179" href="#" />
+<area shape="rect" coords="228,169,239,178" href="#" />
+<area shape="rect" coords="264,168,275,181" href="#" />
+<area shape="rect" coords="294,170,303,179" href="#" />
+<area shape="rect" coords="328,169,341,180" href="#" />
+<area shape="rect" coords="159,206,170,217" href="#" />
+<area shape="rect" coords="194,206,205,215" href="#" />
+<area shape="rect" coords="229,205,238,218" href="#" />
+<area shape="rect" coords="264,207,275,217" href="#" />
+<area shape="rect" coords="294,205,303,217" href="#" />
+<area shape="rect" coords="329,206,339,216" href="#" />
+<area shape="rect" coords="159,232,170,244" href="#" />
+<area shape="rect" coords="195,231,207,242" href="#" />
+<area shape="rect" coords="228,233,238,242" href="#" />
+<area shape="rect" coords="262,232,275,242" href="#" />
+<area shape="rect" coords="294,232,303,243" href="#" />
+<area shape="rect" coords="329,232,341,243" href="#" />
+<area shape="rect" coords="367,231,378,245" href="#" />
+<area shape="rect" coords="438,189,451,198" href="#" />
+<area shape="rect" coords="474,188,485,199" href="#" />
+<area shape="rect" coords="506,189,516,198" href="#" />
+<area shape="rect" coords="541,188,551,198" href="#" />
+<area shape="rect" coords="575,187,586,199" href="#" />
+<area shape="rect" coords="610,188,622,200" href="#" />
+<area shape="rect" coords="641,188,650,199" href="#" />
+<area shape="rect" coords="675,189,688,199" href="#" />
+<area shape="rect" coords="439,213,448,224" href="#" />
+<area shape="rect" coords="474,213,485,226" href="#" />
+<area shape="rect" coords="505,214,517,225" href="#" />
+<area shape="rect" coords="541,214,552,225" href="#" />
+<area shape="rect" coords="574,213,587,225" href="#" />
+<area shape="rect" coords="610,214,623,225" href="#" />
+<area shape="rect" coords="639,213,651,225" href="#" />
+<area shape="rect" coords="675,213,688,225" href="#" />
+<area shape="rect" coords="439,264,449,275" href="#" />
+<area shape="rect" coords="477,264,485,275" href="#" />
+<area shape="rect" coords="505,264,516,275" href="#" />
+<area shape="rect" coords="541,263,555,278" href="#" />
+<area shape="rect" coords="574,265,585,274" href="#" />
+<area shape="rect" coords="611,265,621,274" href="#" />
+<area shape="rect" coords="639,263,650,275" href="#" />
+<area shape="rect" coords="676,264,687,275" href="#" />
+<area shape="rect" coords="439,290,450,300" href="#" />
+<area shape="rect" coords="476,290,485,301" href="#" />
+<area shape="rect" coords="506,290,517,300" href="#" />
+<area shape="rect" coords="543,289,552,301" href="#" />
+<area shape="rect" coords="576,290,585,301" href="#" />
+<area shape="rect" coords="611,289,621,300" href="#" />
+<area shape="rect" coords="638,289,653,303"  nohref="nohref" />
+<area shape="rect" coords="676,288,687,303" href="#" />
+</map>

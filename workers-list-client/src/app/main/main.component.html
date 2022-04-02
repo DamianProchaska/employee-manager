@@ -1,0 +1,189 @@
+<div class="mainContainer">
+  <div class="left">
+    <div class="wrapper">
+      <div class="infoBefore" *ngIf="workerDetailId == null || workerDetailPosition == null ">
+        <p>Wybierz pracownika z listy lub wybierz pozycję na mapie</p>
+    </div>
+      <div multi="true" *ngIf="workers.length > 0 && workerDetailId != null || workerDetailPosition != null" class="ng">
+        <div *ngFor="let worker of workers" class="ng">
+          <div *ngIf="worker.id==(workerDetailId) || worker.stand==(workerDetailPosition)" class="ng">
+            <div class="left">
+                <div *ngIf="ImageExist(worker.foto)==false">
+                  <img src="../../assets/workers/default.jpg " alt="worker1">
+              </div>
+              <div *ngIf="ImageExist(worker.foto)==true">
+                  <img src="../../assets/workers/{{worker.foto}}.jpg " alt="worker1">
+              </div>
+              <h3>{{worker.name}}</h3>
+              <p style="font-weight: bold; font-size: 16px;">{{worker.job}}</p>
+              <p style="font-style: italic; font-size: 14px;">{{worker.domain}}</p>
+            </div>
+            <div class="rightWrapper">
+              <div class="info">
+                <h3>Dane kontaktowe</h3>
+                <div class="info_data">
+                  <div class="data">
+                    <p>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                        <path d="M34,144.063v-36c0.031-6.406,7.406-17.844,7.719-18.125C98.188,32.5,175.438,0,256.063,0  c80.813,0,158.313,32.656,214.813,90.438c0.063,0,7.125,11.25,7.125,17.625v36c0,13.188-9.688,28.875-21.5,34.75l-5.063,2.5  c-11.75,5.938-30.813,5.375-42.25-1.125L366.875,156c-11.5-6.563-21.063-22.75-21.063-35.938V96.031  C290.313,64.094,221.719,64.125,166.188,96v24.063c0,13.188-9.563,29.313-21,35.938l-42.375,24.125  c-11.406,6.563-30.438,7.125-42.281,1.188l-5.031-2.5C43.688,172.875,34,157.25,34,144.063z M480,352v128c0,17.594-14.375,32-32,32  H64c-17.563,0-32-14.406-32-32V352c0-17.594,10.188-42.188,22.625-54.625l82.75-82.75C149.813,202.188,174.438,192,192,192v-32  c15.125-20.125,38.813-32,64-32s48.938,11.875,64,32v32c17.625,0,42.188,10.188,54.625,22.625l82.75,82.75  C469.813,309.813,480,334.406,480,352z M352,352c0-53.031-42.938-96-96-96c-53,0-96,42.969-96,96s43,96,96,96  C309.063,448,352,405.031,352,352z M256,288c-35.281,0-64,28.719-64,64s28.719,64,64,64c35.313,0,64-28.719,64-64  S291.313,288,256,288z"/>
+                      </svg>
+                    {{worker.lphone}}</p>
+                  </div>
+                  <div class="data">
+                    <p>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16px" height="16px" viewBox="0 0 512 512"style="position: relative; top: 2px;">
+                          <path d="M151.46 25.416h209.029c27.156 0 49.5 23.941 49.5 52.654v357.447c0 28.723-22.344 51.056-49.5 51.056h-209.029c-27.115 0-49.439-22.344-49.439-51.057v-357.447c-0.010-28.713 22.313-52.654 49.439-52.654v0zM216.893 419.543v27.115h78.203v-27.115h-78.203zM170.619 52.531c-22.323 0-39.874 17.593-39.874 36.711v255.304c0 20.726 17.552 36.7 39.875 36.7h170.742c22.344 0 39.895-15.974 39.895-36.7v-255.304c0-19.118-17.562-36.711-39.895-36.711h-170.742z" fill="#000000"/>
+                        </svg>
+                    {{worker.mphone}}</p>
+                  </div>
+                  <div class="data">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16px" height="16px" viewBox="0 0 512 512" style="position: relative; top: 3px;margin-top: 5px;">
+                        <path d="M477.573 126.935v280.105h-443.146v-280.105l211.661 158.863 231.486-158.863zM40.182 104.97l206.94 155.74 224.707-155.74h-431.647z"/>
+                      </svg><a href="mailto: {{worker.email}}">
+
+                    {{worker.email}}</a>
+                  </div>
+                </div>
+                <h3></h3>
+                <div class="projects_data">
+                  <div class="data">
+                    <p>{{worker.project}}</p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="map">
+      <div class="holder" id="holder">
+        <div *ngFor="let area of areas">
+            <div class="redCircle" id="redCircle{{area.position}}" [style.left]="area.k1+4+'px'" [style.top]="area.k2+1+'px'"
+             [style.display]="'none'"></div>
+        </div>
+        <div *ngFor="let area of areas">
+          <div class="greenCircle" id="greenCircle{{area.position}}" [style.left]="area.k1+4+'px'"
+            [style.top]="area.k2+1+'px'" [style.display]="'block'"
+            (click)="personPlace(area.position); runShowCircle(area.position); getStand(area.position)" onclick="slide()"></div>
+        </div>
+        <img src="../../assets/officeTest.png" width="767px" height="559px" usemap="#map" />
+      </div>
+    </div>
+  </div>
+
+  <div class="addPeopleForm" id="addPeopleForm">
+    <div *ngIf="!getAccess()">
+      <div class="logToPass">
+        Zaloguj się by móc dodać lub edytować pracowników: <br />
+        <form id="logForm">
+          <input type="text" class="inputShadow" placeholder="Login" #bname> <br />
+          <input type="password" class="inputShadow" placeholder="Hasło" #bpass> <br />
+          <input type="submit" class="inputShadow" (keyup.enter)='logInn(bname.value,bpass.value)'
+            (click)='logInn(bname.value,bpass.value)' value="Zaloguj się">
+        </form>
+      </div>
+      <div class="errorMessage">{{errorMessage}}</div>
+    </div>
+    <div *ngIf="workersID<0">
+      <div *ngIf="getAccess()">
+        <form id="logForm2">
+          <span>Dane pracownika:</span>
+          <input type="text" placeholder="Imie i Nazwisko" #wname class="inputShadow"> <br />
+          <input type="text" placeholder="Praca" #wjob class="inputShadow"> <br />
+          <input type="text" placeholder="Domena" #wdomain class="inputShadow"> <br />
+          <input type="text" placeholder="Projekty" #wproject class="inputShadow"> <br />
+          <input type="text" placeholder="E-mail" #wemail class="inputShadow"> <br />
+          <input type="text" placeholder="Telefon stacjonarny" max="999999999" #wlphone class="inputShadow"> <br />
+          <input type="text" placeholder="Telefon komórkowy" max="999999999" #wmphone class="inputShadow"> <br />
+          <input type="text" placeholder="Nazwa zdjęcia" #wfoto class="inputShadow"> <br />
+
+          <input type="button"
+            (click)='addWorkerForm(wname.value, wjob.value, wdomain.value, wproject.value, wemail.value, wlphone.value, wmphone.value, wfoto.value, chair)'
+             value="Dodaj">
+          <div class="form-alert">{{aalert}}</div>
+
+        </form>
+        <input type="button" class="logout" (click)="logout()" value="Wyloguj się">
+      </div>
+    </div>
+    <div *ngIf="workersID>=0">
+      <div *ngIf="getAccess()">
+        <div multi="true" *ngIf="workers.length > 0 && workerDetailId != null">
+          <div *ngFor="let worker of workers">
+            <div *ngIf="worker.id==workersID">
+              <form id="logForm2">
+                <span>Dane pracownika:</span>
+                  <input type="text" placeholder="Imie i Nazwisko" #wname class="inputShadow" value="{{worker.name}}"> <br />
+                  <input type="text" placeholder="Domena" #wjob class="inputShadow" value="{{worker.job}}"> <br />
+                  <input type="text" placeholder="Domena" #wdomain class="inputShadow" value="{{worker.domain}}"> <br />
+                  <input type="text" placeholder="Projekty" #wproject class="inputShadow" value="{{worker.project}}"> <br />
+                  <input type="text" placeholder="E-mail" #wemail class="inputShadow" value="{{worker.email}}"> <br />
+                  <input type="text" placeholder="Telefon stacjonarny" max="999999999" #wlphone class="inputShadow" value="{{worker.lphone}}"> <br />
+                  <input type="text" placeholder="Telefon komórkowy" max="999999999" #wmphone class="inputShadow" value="{{worker.mphone}}"> <br />
+                  <input type="text" placeholder="Nazwa zdjęcia" #wfoto class="inputShadow" value="{{worker.foto}}"> <br />
+
+
+                <input type="button" value="Aktualizuj"
+                  (click)="editWorker(worker.id, wname.value, wjob.value, wdomain.value, wproject.value, wemail.value, wlphone.value, wmphone.value, wfoto.value, worker.stand)"
+                  (click)="clearWorkerId()" onclick="showAddForm()">
+                <div>
+                  <button class="deleteWorker" onclick="showAcceptDel()">Usuń</button>
+                </div>
+
+                <div class="form-alert">{{aalert}}</div>
+
+
+                <div id="acceptDel">
+                  <p>Na pewno chcesz usunąć tego pracownika?</p>
+                  <button id="delete" (click)="delete(worker.id)"
+                    onclick="showAcceptDel(); showAddForm();reload();">Tak</button>
+                  <button id="cancel" onclick="showAcceptDel()">Nie</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <input type="button" class="logout" (click)="logout()" value="Wyloguj się">
+      </div>
+    </div>
+  </div>
+  <!-- ======================== -->
+
+  <input class="search" placeholder="Szukaj..." [(ngModel)]="searchText" onfocus="focusList()" onblur="blurList()">
+
+  <!-- ======================== -->
+  <div class="peopleList" id="peopleList">
+    <div multi="true" *ngIf="workers.length > 0">
+      <div *ngFor="let worker of workers | appFilter: searchText">
+        <div class="personRow" (click)="showDetails(worker.id); runShowCircle(worker.stand)" onclick="slide()">
+          <div class="personPic">
+            <div *ngIf="ImageExist(worker.foto)==true">
+              <img src="../../assets/workers/{{worker.foto}}.jpg " alt="person">
+            </div>
+            <div *ngIf="ImageExist(worker.foto)==false">
+              <img src="../../assets/workers/default.jpg " alt="person">
+            </div>
+          </div>
+          <div class="personName">
+            {{ worker.name }}
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil"
+              viewBox="0 0 16 16" (click)="showId(worker.id)" onclick="showAddForm()">
+              <path
+                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+            </svg>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

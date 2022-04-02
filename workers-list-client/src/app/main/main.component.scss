@@ -1,0 +1,568 @@
+$primary-color: #171717;
+$second-color: rgb(130, 99, 172);
+$background-color: #FFFFFF;
+$content-color: #000000;
+
+.mainContainer {
+  width: 100%;
+  height: calc(100vh - 80px);
+  animation-name: smoothEntrance;
+  animation-duration: 0.8s;
+  animation-timing-function: ease;
+  margin-top: 80px;
+
+  .search {
+    position: fixed;
+    top: 36px;
+    right: 10%;
+    z-index: 200;
+    border-radius: 50px;
+    height: 15px;
+    width: 160px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    border: none;
+    background-color: $second-color;
+    color: $background-color;
+    font-weight: 700;
+    box-shadow: 0px 0px 10px black;
+    padding-left: 15px;
+    outline-width: 0;
+    transition: .3s;
+
+    &::placeholder {
+      color: $background-color;
+    }
+
+  }
+
+  .search:focus {
+    width: 210px;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .right {
+    position: absolute;
+    left: calc(50vw - 386.5px);
+    top: 100px;
+    float: right;
+    height: calc(100vh - 90px);
+    transition: .5s;
+
+    .map {
+      min-width: 800px;
+      width: 100vh;
+      height: 559px;
+      margin-top: 8vh;
+      margin-right: 5vw;
+      float: left;
+      overflow: hidden;
+
+      img {
+        cursor: default;
+        border-radius: 10px;
+        border-left: 5px solid #202020;
+        margin-left: 0;
+        z-index: 20;
+        position: relative;
+      }
+
+      area {
+        cursor: pointer;
+      }
+
+      .holder {
+        position: relative;
+        width: 767px;
+        height: 559px;
+
+        .redCircle {
+          z-index: 102;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 50px;
+          background: rgb(255, 0, 0);
+          background: radial-gradient(circle, rgba(255, 0, 0, 1) 15%, rgba(131, 85, 85, 0) 100%);
+        }
+
+        .greenCircle {
+          z-index: 101;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 50px;
+          background: rgb(27, 136, 23);
+          background: radial-gradient(circle, rgba(27, 136, 23, 1) 15%, rgba(131, 85, 85, 0) 100%);
+          transition: .3s;
+        }
+
+        .greenCircle:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .slide {
+    left: 40vw;
+    height: calc(100vh - 90px);
+  }
+
+  .left {
+    position: relative;
+    width: 40%;
+    box-sizing: border-box;
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+
+    .wrapper {
+      margin-top: calc(8vh + 79.5px);
+      margin-left: 5vw;
+      position: absolute;
+      box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+
+      .infoBefore {
+        width: 400px;
+        height: 360px;
+        display: flex;
+        padding: 20px;
+        color: white;
+        font-family: "Pacifico", cursive;
+        text-shadow: 0px 0px 10px black;
+        font-size: 25px;
+        position: absolute;
+        z-index: 0;
+      }
+
+      .ng {
+        width: 755px;
+        display: flex;
+        z-index: 1;
+      }
+
+      .left {
+        width: 30%;
+        height: 400px;
+        background: linear-gradient(to right, rgb(81, 26, 153), rgb(117, 76, 170));
+        padding: 30px 25px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: left;
+        color: #fff;
+
+
+        img {
+          border-radius: 5px;
+          margin-top: 5px;
+          margin-bottom: -10px;
+          width: 175px;
+        }
+
+        h3 {
+          margin-bottom: -13px;
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 10px;
+          margin-bottom: -2px;
+          color: #919aa3;
+        }
+      }
+
+
+      .rightWrapper {
+        box-sizing: border-box;
+        width: 45%;
+        // height: 559px;
+        height: 400px;
+        background: #fff;
+        padding: 30px 25px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .info,
+        .projects {
+          // margin-top: 30px;
+          margin-bottom: 25px;
+
+
+          h3 {
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #353c4e;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+          }
+        }
+
+        .info_data,
+        .projects_data {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+
+
+          .data {
+            width: 100%;
+
+
+            h4 {
+              color: #353c4e;
+              margin-bottom: 15px;
+            }
+
+            p {
+              font-size: 15px;
+              margin-bottom: 15px;
+              color: #919aa3;
+            }
+
+            a {
+              font-size: 15px;
+              margin-bottom: 15px;
+              color: $second-color;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1446px) {
+
+    .right {
+      position: static;
+      float: unset;
+      width: 950px;
+      clear: both;
+
+      .map {
+        margin-left: 5vw;
+
+        .img {
+          border-radius: 0px 15px 15px 0px;
+        }
+      }
+    }
+
+    .slide {
+      float: unset;
+      width: 950px;
+      clear: both
+    }
+
+    .left {
+      float: unset;
+      width: 500px;
+      clear: both;
+      margin-left: 30px;
+
+      .wrapper {
+        margin-top: 90vh;
+        margin-left: 12px;
+      }
+    }
+
+
+  }
+
+  @media only screen and (max-width: 1700px) {
+
+    .right {
+
+      .map {
+
+        img {
+          border-radius: 0px 15px 15px 0px;
+        }
+      }
+    }
+
+    .left {
+      .user-info {
+        margin-left: -5px;
+      }
+    }
+  }
+
+  .peopleList {
+    position: absolute;
+    top: 102px;
+    right: 0;
+    height: calc(100% - 102px);
+    width: 300px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0px 0px 10px black;
+    overflow-y: scroll;
+    transition: .5s .3s;
+    z-index: 103;
+
+    .personRow {
+      background-color: blue;
+      height: 70px;
+      border-bottom: .7px solid black;
+      margin-bottom: 1px;
+      box-shadow: 0px 0px 10px black;
+      background-color: rgb(28, 28, 28);
+      padding-top: 10px;
+      padding-left: 5%;
+      padding-right: 10%;
+      transition: .3s;
+
+      .personPic {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        overflow: hidden;
+        border: 4px solid $primary-color;
+        float: left;
+        box-shadow: 0px 0px 10px black;
+
+        img {
+          position: static;
+          margin: auto;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 50px;
+          height: 50px;
+          transition: .3s;
+          transform: scale(1.3);
+        }
+
+        img:hover {
+          transform: scale(1.4);
+        }
+
+
+      }
+
+      .personName {
+        margin-left: 80px;
+        color: $background-color;
+        font-family: 'Roboto';
+        text-shadow: 3px 3px 3px $primary-color;
+        font-weight: 900;
+        margin-top: 15px;
+        font-size: 18px;
+      }
+
+      .bi-pencil {
+        position: absolute;
+        right: 10px;
+        color: $background-color;
+        margin-top: -20px;
+        transition: .3s;
+      }
+
+      .bi-pencil:hover {
+        transform: scale(1.1);
+      }
+
+    }
+
+    .personRow:hover {
+      cursor: pointer;
+      background-color: rgb(42, 42, 42);
+    }
+  }
+
+  .addPeopleForm {
+    position: absolute;
+    top: -1500px;
+    right: 0;
+    height: calc(100% - 102px);
+    width: 300px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0px 0px 10px black;
+    transition: .5s .3s;
+    z-index: 103;
+
+    #logForm2 {
+      width: 300px;
+      text-align: center;
+      margin-top: 15%;
+      font-family: 'Roboto', cursive;
+      color: $background-color;
+      font-weight: 700;
+      font-size: 24px;
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        display: none;
+      }
+
+      .form-alert {
+        margin-top: 20px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.7)
+      }
+
+      #acceptDel {
+        background-color: rgb(32, 32, 32);
+        box-shadow: 0px 0px 10px black;
+        color: rgba(255, 255, 255, 0.7);
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        margin: 0 auto;
+        top: -3000px;
+      }
+
+      #delete {
+        border-radius: 20px;
+        height: 20px;
+        width: 80px;
+        font-size: 13px;
+        font-family: 'Roboto';
+        border: 1px solid black;
+        background-color: $primary-color;
+        color: $background-color;
+        font-weight: 600;
+        box-shadow: 0px 0px 10px black;
+        outline-width: 0;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: .3s;
+        margin-right: 2%;
+      }
+
+      #cancel {
+        border-radius: 20px;
+        height: 20px;
+        width: 80px;
+        font-size: 13px;
+        font-family: 'Roboto';
+        border: none;
+        background-color: rgb(107, 104, 110);
+        color: $background-color;
+        font-weight: 600;
+        box-shadow: 0px 0px 2px black;
+        outline-width: 0;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: .3s;
+        margin-left: 2%;
+      }
+
+      #delete:hover,
+      #cancel:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .inputShadow {
+      transition: .3s;
+    }
+
+    .inputShadow:focus {
+      box-shadow: 0px 0px 15px black;
+      transform: scale(1.02)
+    }
+
+
+
+    input[type=text],
+    input[type=password],
+    input[type=number] {
+      border-radius: 50px;
+      height: 15px;
+      width: 160px;
+      padding: 10px;
+      font-size: 16px;
+      font-family: 'Roboto';
+      border: none;
+      background-color: var(--second-color);
+      color: $background-color;
+      font-weight: 700;
+      box-shadow: 0px 0px 10px black;
+      outline-width: 0;
+      margin-top: 20px;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+      }
+
+    }
+
+    input[type=button],
+    input[type=submit],
+    .deleteWorker {
+      border-radius: 50px;
+      height: 35px;
+      width: 170px;
+      font-size: 18px;
+      font-family: 'Roboto';
+      border: none;
+      background-color: $primary-color;
+      color: $background-color;
+      font-weight: 700;
+      box-shadow: 0px 0px 10px black;
+      outline-width: 0;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    input[type=button]:hover,
+    input[type=submit]:hover,
+    .deleteWorker:hover {
+      transform: scale(1.05);
+    }
+
+    .logToPass {
+      text-align: center;
+      margin-top: 25%;
+      color: $background-color;
+      font-family: 'Roboto';
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .errorMessage {
+      color: red;
+      text-align: center;
+      font-family: 'Roboto';
+      margin-top: 20px;
+    }
+
+    .logout {
+      position: absolute;
+      transform: scale(0.8);
+      bottom: 20px;
+      left: calc(50% - 82px);
+    }
+
+    .logout:hover {
+      transform: scale(0.85) !important;
+    }
+  }
+}
+
+@keyframes smoothEntrance {
+  from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 1446px) {
+  .mainContainer {
+    height: 100%;
+
+  }
+}
